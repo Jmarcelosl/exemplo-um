@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Titulo implements OnInit{
 
+
   public mensagem: String = "Boas Vindas";
 
   ngOnInit(): void {
+    this.definirMensagem();}
+
+  definirMensagem(): void {
     const hora = new Date().getHours();
     if(hora < 12){
       this.mensagem = "Bom dia!";
